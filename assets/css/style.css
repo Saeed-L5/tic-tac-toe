@@ -8,13 +8,14 @@ body {
     position: relative;
     display: flex;
     flex-direction: column
-
-   
-
+}
+.page {
+    padding: 20px;
+    flex: 1;
 }
 /* Navigation Bar */
 .navbar {
-    padding 10px 20px;
+    padding: 10px 20px;
 }
 .navbar-brand {
     font-size: 1.5rem;
@@ -23,7 +24,20 @@ body {
 
 .nav-link {
     font-size: 1.1rem;
-    margin 0 10px;
+    margin: 0 10px;
+}
+/* Board */ 
+.board {
+    display: grid;
+    /* used repeat as is effcient way to define the number of grid-template-columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; 
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 150, 255, 0.2);
+    width: 90%;
+    max-width: 400px;
 }
 /* Info page */
 
