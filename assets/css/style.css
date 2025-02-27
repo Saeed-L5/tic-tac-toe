@@ -20,4 +20,23 @@ body {
     font-size: 1.1rem;
     margin 0 10px;
 }
+/* Info page */
 
+#info {
+    padding: 20px;
+}
+#info .card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+#info h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+#info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
