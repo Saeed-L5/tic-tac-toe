@@ -1,6 +1,11 @@
 /* General Styles*/
 body {
-    /*background: linear-gradient(135deg, #1a1a1a, #2c3e50);*/
-    font-family: arial, sans-serif;
+    background: #2c3e50;
+   
 
+}
+
+
+.navbar a {
+    color: aliceblue;
 }
