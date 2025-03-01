@@ -9,4 +9,6 @@ for (let i = 0; i < 9; i++) {
     $('#board').append('<div class="cell data-index="' + i + '"></div>')
     
 }
+
+
 })
