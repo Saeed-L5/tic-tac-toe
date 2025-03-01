@@ -49,6 +49,15 @@ body {
     width: 90%;
     max-width: 400px;
 }
+.x-mark {
+    color: #ff4757;
+    text-shadow:  0 0 20px rgba(255, 70, 85, 0.5);
+}
+
+.o-mark {
+    color: #2ed573;
+    text-shadow:  0 0 20px rgba(45, 210, 115, 0.5);
+}
 /* Cells */
 .cell {
     display: flex;

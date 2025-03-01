@@ -10,5 +10,14 @@ for (let i = 0; i < 9; i++) {
     
 }
 
+// Create Cell Click 
+$('.cell').click(function() {
+    let index = $(this).data('index');
 
+    if (game[index] === '' && gameActive) {
+        game[index] = currentplayer;
+        $(this).addClass(currentplayer === 'X' ? 'x-mark' : 'o-mark').text(currentplayer);
+    }
+
+})
 })
