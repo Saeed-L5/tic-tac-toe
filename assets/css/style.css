@@ -28,13 +28,13 @@ body {
 }
 /* Game Container */
 .game-container {
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 1;
-    min-height: 80vh;
 }
 /* Board */ 
 .board {
@@ -107,4 +107,13 @@ body {
 #info p {
     font-size: 1.1rem;
     line-height: 1.6;
+}
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    z-index: 2;
+    position: relative;
 }
