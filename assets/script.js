@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let currentplayer = 'X';
+    let currentPlayer = 'X';
     let game = ['', '', '', '', '', '', '', '', ''];
     let gameActive = true;
     let scores = { X: 0, O: 0, D: 0 };
@@ -14,11 +14,13 @@ $(document).ready(function () {
         let index = $(this).data('index');
 
         if (game[index] === '' && gameActive) {
-            game[index] = currentplayer;
-            $(this).addClass(currentplayer === 'X' ? 'x-mark' : 'o-mark').text(currentplayer);
+            game[index] = currentPlayer;
+            $(this).addClass(currentPlayer === 'X' ? 'x-mark' : 'o-mark').text(currentPlayer);
 
             if (checkWin()) {
                 handleWin();
+            } else if (game.every(cell => cell !== '')) {
+                
             }
         }
 
@@ -33,7 +35,7 @@ $(document).ready(function () {
         ];
 
         return winPatterns.some(pattern => {
-            if (pattern.every(index => game[index] === currentplayer)) {
+            if (pattern.every(index => game[index] === currentPlayer)) {
                 pattern.forEach(i => {
                     return $(`.cell[data-index="${i}"]`).css('transform', 'scale(1.1)');
                 });
@@ -41,8 +43,20 @@ $(document).ready(function () {
             }
             return false;
 
-        })
+        });
 
     
+    }
+    // Handle win score
+    function handleWin() {
+        game = false;
+        scores[currentPlayer]++;
+        updateScores();
+    }
+    //Create update score function
+    function updateScores() {
+        $('#xScore').text(scores.X);
+        $('#oScore').text(scores.O)
+        $('#drawCount').text(scores.D);
     }
 })
