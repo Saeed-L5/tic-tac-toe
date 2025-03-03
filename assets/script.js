@@ -39,7 +39,7 @@ $(document).ready(function () {
         return winPatterns.some(pattern => {
             if (pattern.every(index => game[index] === currentPlayer)) {
                 pattern.forEach(i => {
-                    return $(`.cell[data-index="${i}"]`).css('transform', 'scale(1)'); // Add effect on win cells
+                    return $(`.cell[data-index="${i}"]`).css('transform', 'scale(1.1)'); // Add effect on win cells
                 });
                 return true;
             }
@@ -76,4 +76,13 @@ $(document).ready(function () {
         updateScores();
         $('.cell').addclass('draw');
     }
+    // Navigation
+    $('.nav-link').click(function(e) {
+        e.preventDefault();
+        const target = $(this).attr('href');
+        $('.page').addClass('d-none');
+        $(target).removeClass('d-none');
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active');
+    });
 })
