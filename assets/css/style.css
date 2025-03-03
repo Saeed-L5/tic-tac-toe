@@ -1,22 +1,26 @@
 /* General Styles*/
 body {
     background: linear-gradient(135deg, #1a1a1a, #2c3e50);
-    margin: 0;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
     overflow: hidden;
     position: relative;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+
 }
+
 .page {
-    padding: 20px;
     flex: 1;
+    padding: 20px;
 }
+
 /* Navigation Bar */
 .navbar {
     padding: 10px 20px;
 }
+
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
@@ -26,88 +30,121 @@ body {
     font-size: 1.1rem;
     margin: 0 10px;
 }
+
 /* Game Container */
 .game-container {
     min-height: 80vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    position: relative;
+    align-items: center;
     z-index: 1;
+    position: relative;
+
 }
-/* Board */ 
+
+/* Board */
 .board {
     display: grid;
     /* used repeat as is effcient way to define the number of grid-template-columns */
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px; 
+    gap: 10px;
     background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
+    padding: 15px;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(0, 150, 255, 0.2);
     width: 90%;
     max-width: 400px;
 }
+
+/* Cells */
+.cell {
+    width: 100%;
+    aspect-ratio: 1;
+    /* Ensure cells are square */
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+
 .x-mark {
     color: #ff4757;
-    text-shadow:  0 0 20px rgba(255, 70, 85, 0.5);
+    text-shadow: 0 0 20px rgba(255, 70, 85, 0.5);
 }
 
 .o-mark {
     color: #2ed573;
-    text-shadow:  0 0 20px rgba(45, 210, 115, 0.5);
+    text-shadow: 0 0 20px rgba(45, 210, 115, 0.5);
 }
-/* Cells */
-.cell {
-    display: flex;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    aspect-ratio: 1; /* Ensure cells are square */
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+
 /* Score Board */
 .score-board {
-    border-radius: 10px;
     background: rgba(255, 255, 255, 0.05);
-    text-align: center;
-    max-width: 400px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(3px);
     width: 90%;
-    padding: 10px 15px;
-    margin-bottom: 10px;
+    max-width: 400px;
+    text-align: center;
 }
+
 .score-board h3 {
     font-size: 1.5rem;
+    margin-bottom: 10px;
 }
-.score-board span {
+
+.score-board h5 {
     font-size: 1.2rem;
 }
+
+.score-board span {
+    font-size: 1.1rem;
+}
+
+/* Reset Button */
+#resetBtn {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+}
+
 /* Info page */
 
 #info {
     padding: 20px;
 }
+
 #info .card {
     background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
     border: none;
     border-radius: 10px;
+    padding: 20px;
     color: #fff;
 }
+
 #info h3 {
     margin-bottom: 10px;
     font-size: 1.5rem;
 }
+
 #info p {
     font-size: 1.1rem;
     line-height: 1.6;
 }
+
 /* Footer */
 footer {
     background: rgba(0, 0, 0, 0.5);
@@ -117,8 +154,9 @@ footer {
     z-index: 2;
     position: relative;
 }
+
 /* Responsive Adjusments */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .navbar-brand {
         font-size: 1.3rem
     }
@@ -130,45 +168,55 @@ footer {
     .cell {
         font-size: 2rem;
     }
+
     .score-board h3 {
         font-size: 1.3rem;
     }
+
     .score-board h5 {
         font-size: 1.1rem;
     }
+
     .score-board span {
-        font-size: 1 rem;
+        font-size: 1rem;
     }
+
     #resetBtn {
         font-size: 1rem;
-        padding: 8px 20px;
+        padding: 8px 16px;
     }
+
     #info h3 {
         font-size: 1.2rem;
     }
+
     #info p {
         font-size: 1rem;
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .cell {
         font-size: 1.4rem;
     }
+
     .score-board h3 {
         font-size: 1.2rem;
     }
+
     .score-board h5 {
         font-size: 1rem;
     }
-    
+
     #resetBtn {
         font-size: 0.9rem;
         padding: 6px 12px;
     }
+
     #info h3 {
         font-size: 1.2rem;
     }
+
     #info p {
         font-size: 1rem;
     }

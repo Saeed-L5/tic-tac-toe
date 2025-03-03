@@ -22,7 +22,7 @@ $(document).ready(function () {
             } else if (game.every(cell => cell !== '')) {
                 handleDraw();
             } else {
-                currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; 
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
             }
         }
 
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
         });
 
-    
+
     }
     // Handle win score
     function handleWin() {
@@ -57,7 +57,7 @@ $(document).ready(function () {
     }
 
     // Reset Button
-    $('#resetBtn').click(function() {
+    $('#resetBtn').click(function () {
         game = ['', '', '', '', '', '', '', '', ''];
         gameActive = true;
         currentPlayer = 'X';
@@ -77,7 +77,7 @@ $(document).ready(function () {
         $('.cell').addclass('draw');
     }
     // Navigation
-    $('.nav-link').click(function(e) {
+    $('.nav-link').click(function (e) {
         e.preventDefault();
         const target = $(this).attr('href');
         $('.page').addClass('d-none');
@@ -86,3 +86,13 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 });
+
+// Responsive design adhusments
+$(window).resize(function () {
+    const screenWidth = $(window).width();
+    $('.cell').css({
+        width: screenWidth < 768 ? '60px' : '80px',
+        height: screenWidth < 768 ? '60px' : '80px',
+        fontSize: screenWidth < 768 ? '1.8em' : '2.2em'
+    });
+}).trigger('resize');
