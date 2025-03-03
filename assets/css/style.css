@@ -150,3 +150,26 @@ footer {
         font-size: 1rem;
     }
 }
+
+@media (max-width: 480px) {
+    .cell {
+        font-size: 1.4rem;
+    }
+    .score-board h3 {
+        font-size: 1.2rem;
+    }
+    .score-board h5 {
+        font-size: 1rem;
+    }
+    
+    #resetBtn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+    #info h3 {
+        font-size: 1.2rem;
+    }
+    #info p {
+        font-size: 1rem;
+    }
+}
