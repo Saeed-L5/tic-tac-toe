@@ -117,3 +117,36 @@ footer {
     z-index: 2;
     position: relative;
 }
+/* Responsive Adjusments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.3rem
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .cell {
+        font-size: 2rem;
+    }
+    .score-board h3 {
+        font-size: 1.3rem;
+    }
+    .score-board h5 {
+        font-size: 1.1rem;
+    }
+    .score-board span {
+        font-size: 1 rem;
+    }
+    #resetBtn {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+    #info h3 {
+        font-size: 1.2rem;
+    }
+    #info p {
+        font-size: 1rem;
+    }
+}

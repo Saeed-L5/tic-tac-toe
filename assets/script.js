@@ -62,7 +62,7 @@ $(document).ready(function () {
         gameActive = true;
         currentPlayer = 'X';
         $('.cell').removeClass('x-mark o-mark draw').text('').css('transform', 'scale(1)');
-    })
+    });
     //Create update score function
     function updateScores() {
         $('#xScore').text(scores.X);
@@ -85,4 +85,4 @@ $(document).ready(function () {
         $('.nav-link').removeClass('active');
         $(this).addClass('active');
     });
-})
+});
