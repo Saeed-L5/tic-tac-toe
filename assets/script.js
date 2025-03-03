@@ -20,11 +20,13 @@ $(document).ready(function () {
             if (checkWin()) {
                 handleWin();
             } else if (game.every(cell => cell !== '')) {
-                
+                handleDraw();
+            } else {
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; 
             }
         }
 
-    })
+    });
 
     // Check win conditions
     function checkWin() {
@@ -37,7 +39,7 @@ $(document).ready(function () {
         return winPatterns.some(pattern => {
             if (pattern.every(index => game[index] === currentPlayer)) {
                 pattern.forEach(i => {
-                    return $(`.cell[data-index="${i}"]`).css('transform', 'scale(1.1)');
+                    return $(`.cell[data-index="${i}"]`).css('transform', 'scale(1)'); // Add effect on win cells
                 });
                 return true;
             }
@@ -53,10 +55,25 @@ $(document).ready(function () {
         scores[currentPlayer]++;
         updateScores();
     }
+
+    // Reset Button
+    $('#resetBtn').click(function() {
+        game = ['', '', '', '', '', '', '', '', ''];
+        gameActive = true;
+        currentPlayer = 'X';
+        $('.cell').removeClass('x-mark o-mark draw').text('').css('transform', 'scale(1)');
+    })
     //Create update score function
     function updateScores() {
         $('#xScore').text(scores.X);
         $('#oScore').text(scores.O)
         $('#drawCount').text(scores.D);
+    }
+    // Create draw score function
+    function handleDraw() {
+        game = false;
+        scores.D++;
+        updateScores();
+        $('.cell').addclass('draw');
     }
 })
