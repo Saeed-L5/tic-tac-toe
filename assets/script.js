@@ -88,11 +88,11 @@ $(document).ready(function () {
 });
 
 // Responsive design adhusments
-$(window).resize(function () {
-    const screenWidth = $(window).width();
-    $('.cell').css({
-        width: screenWidth < 768 ? '60px' : '80px',
-        height: screenWidth < 768 ? '60px' : '80px',
-        fontSize: screenWidth < 768 ? '1.8em' : '2.2em'
-    });
-}).trigger('resize');
+//$(window).resize(function () {
+   // const screenWidth = $(window).width();
+   // $('.cell').css({
+   //     width: screenWidth < 768 ? '60px' : '90px',
+       // height: screenWidth < 768 ? '60px' : '90px',
+       // fontSize: screenWidth < 768 ? '1.8em' : '2em'
+   // });
+//}).trigger('resize');

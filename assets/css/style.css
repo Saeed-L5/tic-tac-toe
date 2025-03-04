@@ -81,12 +81,12 @@ body {
 
 .x-mark {
     color: #ff4757;
-    text-shadow: 0 0 20px rgba(255, 70, 85, 0.5);
+    text-shadow: 0 0 15px rgba(255, 70, 85, 0.5);
 }
 
 .o-mark {
     color: #2ed573;
-    text-shadow: 0 0 20px rgba(45, 210, 115, 0.5);
+    text-shadow: 0 0 15px rgba(45, 210, 115, 0.5);
 }
 
 /* Score Board */
@@ -150,29 +150,36 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     text-align: center;
-    padding: 10px;
     z-index: 2;
     position: relative;
 }
 
 /* Responsive Adjusments */
+@media screen and (max-width: 992px) {
+.page {
+    margin-bottom: 10px;
+}
+}
 @media screen and (max-width: 768px) {
+    .game-container {
+        min-height: 76vh;
+    }
+    .page {
+        padding: 32px;
+        margin-bottom: 10px;
+    }
+    .board {
+        max-width: 350px;
+    }
+    .score-board {
+        max-width: 350px;
+    }
     .navbar-brand {
         font-size: 1.3rem
     }
-
-    .nav-link {
-        font-size: 1rem;
-    }
-
     .cell {
         font-size: 2rem;
     }
-
-    .score-board h3 {
-        font-size: 1.3rem;
-    }
-
     .score-board h5 {
         font-size: 1.1rem;
     }
@@ -195,7 +202,13 @@ footer {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
+    .game-container {
+        min-height: 80vh;
+    }
+    .page {
+        padding: 20px;
+    }
     .cell {
         font-size: 1.4rem;
     }
