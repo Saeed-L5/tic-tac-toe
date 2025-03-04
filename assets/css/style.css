@@ -127,11 +127,13 @@ body {
     padding: 20px;
 }
 
+
+
 #info .card {
     background: rgba(255, 255, 255, 0.05);
     border: none;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
     color: #fff;
 }
 
@@ -227,10 +229,11 @@ footer {
     }
 
     #info h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     #info p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.3;
     }
 }
