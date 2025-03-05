@@ -29,7 +29,11 @@ $(document).ready(function () {
 
     });
 
-    // Check win conditions
+    /**this function checks the winner
+     * winPaterns descripe win combinations
+     * return effect to win cells
+     * return {boolean} true if current player won
+     */
     function checkWin() {
         const winPatterns = [
             [0, 1, 2], [3, 4, 5], [6, 7, 8], //Rows
@@ -37,7 +41,6 @@ $(document).ready(function () {
             [0, 4, 8], [2, 4, 6], // Diagonals
         ];
 
-        // Check if any win pattern is satisfied
         return winPatterns.some(pattern => {
             if (pattern.every(index => game[index] === currentPlayer)) {
                 pattern.forEach(i => {
@@ -51,7 +54,13 @@ $(document).ready(function () {
 
 
     }
-    // Handle win score
+    /**
+    * This function handles the win
+    * it sets the game boolean to false
+    * increments the players score and 
+    * updates it on screen
+    * It does not return anything
+    */
     function handleWin() {
         game = false;
         scores[currentPlayer]++;
@@ -63,29 +72,42 @@ $(document).ready(function () {
         game = ['', '', '', '', '', '', '', '', '']; // Reset game state
         gameActive = true;
         currentPlayer = 'X';
-        $('.cell').removeClass('x-mark o-mark draw').text('').css('transform', 'scale(1)');
+        $('.cell').removeClass('x-mark o-mark draw').text('').css('transform', 'scale(1)'); //restore default styles
     });
-    //Create update score function
+    /** this function updates scores
+     * display scores that been updated with current values
+     * It does not return anything
+     */
     function updateScores() {
         $('#xScore').text(scores.X);
         $('#oScore').text(scores.O);
         $('#drawCount').text(scores.D);
     }
-    // Create draw score function
+    /**  This function handles draw scenario
+    * it sets the game boolean to false
+    * update draw counter
+    * It does not return anything
+    */
     function handleDraw() {
         game = false;
         scores.D++;
         updateScores();
         $('.cell').addclass('draw'); // Add draw styling
     }
-    // Navigation
+    
+    // Navigation 
     $('.nav-link').click(function (e) {
         e.preventDefault();
-        const target = $(this).attr('href'); // Get the target page
-        $('.page').addClass('d-none'); // Hide all pages
-        $(target).removeClass('d-none'); // show the target page
-        $('.nav-link').removeClass('active'); // Remove active class from all links
-        $(this).addClass('active'); // Add sctive class to the clicked link
+        // Get the target page
+        const target = $(this).attr('href'); 
+        // Hide the target page 
+        $('.page').addClass('d-none'); 
+        // show the target page
+        $(target).removeClass('d-none'); 
+        // remove active class from all links
+        $('.nav-link').removeClass('active'); 
+        // Add active class to the clicked link
+        $(this).addClass('active'); 
     });
 });
 
