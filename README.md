@@ -3,6 +3,8 @@
 This is fully responsive and interactive Tic Tac Toe game built using **HTML**, **CSS**, **JavaScript**, and **jQuery**.
 it features a clean design, score tracking, and responsive layout that works on all screen sizes.
 
+![Screenshot of responsive design](assets/image/responsive.png)
+
 ## Features
 1. **Interactive Gameplay**:
    - Play Tic Toc Toe with two players (X and O).
@@ -20,3 +22,5 @@ it features a clean design, score tracking, and responsive layout that works on 
 4. **Modern UI**:
    - Gradient background for clean look.
    - Smooth animations and hover effects.
+
+   
