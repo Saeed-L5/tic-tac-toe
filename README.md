@@ -67,6 +67,7 @@ it features a clean design, score tracking, and responsive layout that works on 
 
 4. JavaScript
 - I ran the JavaScript code through [JShint](https://jshint.com/) no errors to show.
+![JShint](assets/image/jshint.png)
 
 
 
