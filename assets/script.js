@@ -68,7 +68,7 @@ $(document).ready(function () {
     //Create update score function
     function updateScores() {
         $('#xScore').text(scores.X);
-        $('#oScore').text(scores.O)
+        $('#oScore').text(scores.O);
         $('#drawCount').text(scores.D);
     }
     // Create draw score function
