@@ -6,7 +6,7 @@ it features a clean design, score tracking, and responsive layout that works on 
 ![Screenshot of responsive design](assets/image/responsive.png)
 [Click here to start playing](https://saeed-l5.github.io/tic-tac-toe/)
 
----
+
 
 
 ## Features
@@ -27,21 +27,21 @@ it features a clean design, score tracking, and responsive layout that works on 
    - Gradient background for clean look.
    - Smooth animations and hover effects.
 
-   ---
+   
 
 ## How to Play
 1. players take turns clicking on the cells to place their mark (X or O).
 2. The first player to get three of their marks in a row (horizontal, vertical or diagonal) wins.
 3. If all cells are filled without a winner, the game ends in a draw.
 
----
+
 
 ## Files
 - **index.html**: The main HTML file containing the structure of the game.
 - **style.css**: The CSS file for styling the game and making it responsive.
 - **script.js**: The JavaScript file for game logic and interactivity.
 
----
+
 
 ## Technologies Used
 - HTML
@@ -50,7 +50,7 @@ it features a clean design, score tracking, and responsive layout that works on 
 - jQuery
 - Bootstrap
 
----
+
 
 ## Test
 1. Accessibility
@@ -68,7 +68,15 @@ it features a clean design, score tracking, and responsive layout that works on 
 4. JavaScript
 - I ran the JavaScript code through [JShint](https://jshint.com/) no errors to show.
 ![JShint](assets/image/jshint.png)
+ 
+ 
 
 
+ ## Deployment
+The following steps were taken to deploy the website using Github pages:
+1. Within the Github repository, click on **Settings** in the top navigation bar
+2. Choose **Pages** in the left navigation menu
+3. In the source section, choose **Deploy from branch**
+4. In the branch section, choose main and click **Save**
 
    
