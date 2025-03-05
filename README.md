@@ -4,6 +4,7 @@ This is fully responsive and interactive Tic Tac Toe game built using **HTML**, 
 it features a clean design, score tracking, and responsive layout that works on all screen sizes.
 
 ![Screenshot of responsive design](assets/image/responsive.png)
+[Click here to start playing](https://saeed-l5.github.io/tic-tac-toe/)
 
 ---
 
@@ -57,8 +58,15 @@ it features a clean design, score tracking, and responsive layout that works on 
 ![Lighthouse test](assets/image/lighthouse.png)
 
 2. HTML
-- Iran the website link through [HTML Validator](https://validator.w3.org/detailed.html) no errors to show.
+- I ran the website link through [HTML Validator](https://validator.w3.org/nu/) no errors to show.
 ![W3C HTML](assets/image/w3c-html.png)
+
+3. CSS
+- I ran the CSS code through [CSS Validator](https://jigsaw.w3.org/css-validator/) no errors to show.
+![W3C CSS](assets/image/w3c-css.png)
+
+4. JavaScript
+- I ran the JavaScript code through [JShint](https://jshint.com/) no errors to show.
 
 
 
