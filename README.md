@@ -51,4 +51,12 @@ it features a clean design, score tracking, and responsive layout that works on 
 
 ---
 
+## Test
+1. Accessibility
+- I ran the website through Lighthouse and confirmed that the colors and font are easy to read and the website is accessible.
+![Lighthouse test](assets/image/lighthouse.png)
+
+
+
+
    
