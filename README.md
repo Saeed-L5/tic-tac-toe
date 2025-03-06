@@ -79,4 +79,20 @@ The following steps were taken to deploy the website using Github pages:
 3. In the source section, choose **Deploy from branch**
 4. In the branch section, choose main and click **Save**
 
+The following git command been used:
+1. git add . - to add the files to the staging area before being committed.
+2. git commit -m "commit message" - to commit changes to the local repository queue that are ready for the final step.
+3. git push - to push all committed code to the remote repository on Github.
+
+Cloning of the Repository Code locally
+1. Go to the Github repository that you want to clone
+2. Click on the Code button located above all the project files
+3. Click on HTTPS and copy the repository link
+4. Open new file in VS code and name it the same as repository
+5. Open new terminal and use git clone copied link  . 
+6. The project is now created as a local clone
+
+## Credit
+- special thank to my mentor Spencer Barriball for the support, help with troubleshooting, and answering all my Questions. He has been a great help on the way!
+
    
